@@ -1,0 +1,141 @@
+:root {
+	--main-bg-color: black;
+}
+
+body {
+	margin: 0;
+	background-color: #00000F;
+	color: #E0E0EE;
+}
+
+p {
+	text-indent: 1.5em;
+	text-align: justify;
+}
+ 
+h1, h2{
+	text-align: center;
+}
+
+h1 {
+	padding-top: 2%;
+	font-size: 40px;
+	margin-bottom: 0.1em;
+}
+
+a.link { 
+	color: #E0E0EE;
+	text-decoration: none;
+	border-bottom: 1px dotted #E0E0EE; 
+}
+
+a.link:hover {
+	border-bottom-style: solid;
+	color: white;
+}
+
+#pic {
+	float: right; 
+	margin: -15px 0px 0px 20px;
+	width: 150px;
+	height: 150px;
+}
+
+@keyframes headerFadeIn {
+	from {
+		transform: rotate(10deg);
+		top: -.5em;
+		opacity: 0;
+	}
+	to {
+		transform: rotate(0deg);
+		top: .2em;
+		opacity: 1;
+	}
+}
+
+@keyframes iconRotate {
+	from{
+		transform: rotate(75deg);
+		opacity: 0;
+	}
+	to {
+		transform: rotate(0deg);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeOut {
+	from {
+		opacity: .8;
+	}
+	to {
+		opacity: 0;
+	}
+}
+@keyframes dotZoomIn {
+	from {
+		opacity: 0;
+		transform: scale(0);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.h_center {
+	height: 100px;
+	width: 700px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+
+.header1 {
+	position: relative;
+	top:.2em;
+	animation-duration: .6s;
+	animation-name: headerFadeIn;
+	animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
+}
+
+.icon {
+	animation-duration: .6s;
+	animation-name: iconRotate;
+	animation-delay: .7s;
+	animation-fill-mode: backwards;
+	display: inline-block;
+	*display: inline;
+}
+
+.dot {
+	animation-duration: .6s;
+	animation-name: dotZoomIn;
+	animation-delay: .7s;
+	animation-fill-mode: backwards;
+}
+
+.content {
+	animation-duration: .7s;
+	animation-name: fadeIn;
+	animation-delay: 1s;
+	animation-fill-mode: backwards;
+}
+.icon_list {
+	text-align: center;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}

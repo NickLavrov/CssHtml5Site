@@ -1,0 +1,88 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="assets/cobalt.css">
+	<!-- Important Owl stylesheet -->
+	<link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">	
+	<!-- Default Theme -->
+	<link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
+	<!--  jQuery 1.7+  -->
+	<script src="assets/jquery-1.9.1.min.js"></script>
+	<!-- Include js plugin -->
+	<script src="assets/owl-carousel/owl.carousel.js"></script>
+	<style>
+	#gallery .item{
+		margin: 3px;
+	}
+	#gallery .item img{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	</style>
+</head>
+<body class="h_center">
+	<script>
+	$(document).ready(function() {
+		$("#gallery").owlCarousel({
+			items: 4,
+			itemsDesktop: [1199,3],
+			itemsDesktopSmall: [979,3]
+  		});
+	});
+	function fadeIn(elem) {
+		document.getElementById(elem).style.animationName = "fadeIn";
+		document.getElementById(elem).style.animationDuration = ".3s";
+		document.getElementById(elem).style.animationFillMode = "forwards";
+	}
+	function fadeOut(elem) {
+		document.getElementById(elem).style.animationName = "fadeOut";
+		document.getElementById(elem).style.animationDuration = ".3s";
+	}
+	</script>
+	<div class="header1">
+		<h1>nicklavrov.com</h1>
+	</div>
+	<div class="icon_list">
+		<table width="50%">
+			<tr>
+			<td width="33%"><a href="aboutme" onmouseenter="fadeIn('aboutme')" onmouseout="fadeOut('aboutme')"><img class="icon" src="thumbs/aboutme.png"></a></td>
+			<td width="33%"><a href="mailto:nlavrov999@gmail.com" onmouseenter="fadeIn('contact')" onmouseout="fadeOut('contact')"><img class="icon" src="thumbs/contact.png"></a></td>
+			<td width="33%"><a href="resume" onmouseenter="fadeIn('resume')" onmouseout="fadeOut('resume')"><img class="icon" src="thumbs/resume.png"></a></td>
+			</tr>
+			<tr>
+			<td id="aboutme" style="opacity:0">about me</td>
+			<td id="contact" style="opacity:0">contact</td>
+			<td id="resume" style="opacity:0">resume</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<table width="100%">
+			<tr>
+				<td><img class="dot" src="thumbs/dot.png"></td>
+				<td><img class="dot" src="thumbs/dot.png"></td>
+				<td><img class="dot" src="thumbs/dot.png"></td>
+				<td><img class="dot" src="thumbs/dot.png"></td>
+				<td><img class="dot" src="thumbs/dot.png"></td>
+				<td><img class="dot" src="thumbs/dot.png"></td>
+				<td><img class="dot" src="thumbs/dot.png"></td>
+				<td><img class="dot" src="thumbs/dot.png"></td>
+			</tr>
+		</table>
+	</div>
+	<div class="content">
+		<h2>project gallery</h2>
+		<!-- owl here-->
+		<div id="gallery">
+			<div class="item"><a href="mural"><img src="thumbs/mural.png" alt="mural"></a></div>
+			<div class="item"><a href="lexicanvas"><img src="thumbs/lexicanvas.png" alt="lexicanvas"></a></div>
+			<div class="item"><a href="game"><img src="thumbs/game.png" alt="game"></a></div>
+			<div class="item"><img src="thumbs/owl4.jpg" alt="owl4.jpg"></div>
+			<div class="item"><img src="thumbs/owl5.jpg" alt="owl5.jpg"></div>
+		</div>
+	</div>
+</body>
+</html>
